@@ -1,5 +1,7 @@
+
+
 const ActorCard=({country,deathday,name,image,gender,birthday})=>{
-    //const summarySplit=summary? summary.split("").slice(0,10).join("").replace(/<.+?>/g,''):"no Descriptions"
+   
 return (
 <div>
   
@@ -14,7 +16,7 @@ return (
 {!!birthday&&<p>Born{birthday}</p>}
 <p>{deathday?`Died${deathday}`:"Alive"}</p>
 <div>
-    <link to="/">Read More</link>
+   
     <button type="button"> Start Me</button>
 </div>
 

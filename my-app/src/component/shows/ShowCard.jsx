@@ -1,3 +1,6 @@
+import {Link} from "react-router-dom"
+
+
 const ShowCard=({name,image,id,summary})=>{
     const summarySplit=summary? summary.split("").slice(0,10).join("").replace(/<.+?>/g,''):"no Descriptions"
 return <div>
@@ -7,7 +10,7 @@ return <div>
 <img src={image} alt={name}/>
 </div>
 <div>
-    <link to="/">Read More</link>
+    <Link to="/"Read More/>
     <button type="button"> Start Me</button>
 </div>
 
