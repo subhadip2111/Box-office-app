@@ -1,26 +1,21 @@
+const ActorCard = ({ country, deathday, name, image, gender, birthday }) => {
+  return (
+    <div>
+      <div>
+        <img src={image} alt={name} />
+      </div>
+      <h1>
+        {name} {gender && `(${gender})`}
+      </h1>
 
+      <p>{country ? `Comes from ${country}` : 'no country known'}</p>
 
-const ActorCard=({country,deathday,name,image,gender,birthday})=>{
-   
-return (
-<div>
-  
-<div>
-<img src={image} alt={name}/>
-</div>
- <h1>{name} {gender &&`(${gender})`}</h1>
-
- 
- <p>{country?`Comes from ${country}`:"no country known"}</p>
-
-{!!birthday&&<p>Born{birthday}</p>}
-<p>{deathday?`Died${deathday}`:"Alive"}</p>
-<div>
-   
-    <button type="button"> Start Me</button>
-</div>
-
-</div>
-)
-}
-export default ActorCard
+      {!!birthday && <p>Born{birthday}</p>}
+      <p>{deathday ? `Died${deathday}` : 'Alive'}</p>
+      <div>
+        <button type="button"> Start Me</button>
+      </div>
+    </div>
+  );
+};
+export default ActorCard;
