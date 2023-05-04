@@ -1,19 +1,13 @@
 const BASE_URL = 'https://api.tvmaze.com';
-
 const apiGet = async queryString => {
+  //   throw new Error('Something Bad Happened');
   const response = await fetch(`${BASE_URL}${queryString}`);
   const body = await response.json();
   return body;
 };
 export const searchForShows = query => apiGet(`/search/shows?q=${query}`);
 export const searchForPeople = query => apiGet(`/search/people?q=${query}`);
+//embed is allow us to get more data about the url or link
+export const getShowById = showId => apiGet(`/shows/${showId}?embed[]=seasons&embed[]=cast`);
 
-////////////----------------------------------//
-// const API_BASE_URL = 'https://api.tvmaze.com';
-
-// export async function apiGet(queryString) {
-//   const response = await fetch(`${API_BASE_URL}${queryString}`).then(r =>
-//     r.json()
-//   );
-//   return response;
-// }
+ 
