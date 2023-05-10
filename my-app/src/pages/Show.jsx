@@ -1,6 +1,6 @@
-
+import { Link,useParams } from "react-router-dom"
 //import { useEffect,useState } from "react"
-import { useParams } from "react-router-dom"
+//import { useParams } from "react-router-dom"
 import {getShowById} from "../api/tvmaze"
 import { useQuery } from "@tanstack/react-query"
 import ShowMainData from "../component/shows/ShowMainData"
@@ -18,10 +18,16 @@ if(showError){
     return <div> we have an error {showError.message}</div>
 }
 
+
+
 if(showData){
     return (
+        
         <div> 
+     
         <div>
+        <Link to='/'> Go Back To Home</Link>
+
            <ShowMainData image={showData.image} 
            name={showData.name} rating={showData.rating}
             summary={showData.summary}
