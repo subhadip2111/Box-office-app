@@ -4,7 +4,7 @@ import {useQuery} from '@tanstack/react-query'
 import { SearchFrom } from '../component/SearchFrom';
 import ShowGrid from '../component/shows/ShowGrid';
 import ActorsGrid from '../component/actor/ActorsGrid';
- //import styled from "styled-components"
+
 
 const Home = () => {
   //

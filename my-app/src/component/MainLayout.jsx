@@ -5,7 +5,7 @@ import AppTitle from './AppTitle';
 const MainLayout = () => {
   return (
     <div>
-      this is share markup
+   
       <Navs />
       <AppTitle />
       <Outlet />
